@@ -54,6 +54,19 @@ public class RunnerFetch04 {
         System.out.println("********** INNER JOIN ***************");
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         String hql1= "SELECT s.name, d.name FROM  Student04 s INNER JOIN FETCH Dairy04 d ON s.id = d.student.id ";
 
        List<Object[]> resultList1 = session.createQuery(hql1).getResultList();
@@ -61,13 +74,28 @@ public class RunnerFetch04 {
          /*
         In Hibernate, a left join is a type of SQL join operation that returns all the rows from the left table
         and the matching rows from the right table, based on a specified join condition.
+
+
+
+
+
          */
 
         System.out.println("********** LEFT JOIN ***************");
 
+
+
+
+
+
          String hql2= "SELECT s.name, d.name FROM  Student04 s LEFT JOIN FETCH Dairy04 d ON s.id = d.student.id ";
         List<Object[]> resultList2 =  session.createQuery(hql2).getResultList();
         resultList2.forEach(obj-> System.out.println(Arrays.toString(obj)));
+
+
+
+
+
 
           /*
         In Hibernate, a right join is a type of SQL join operation that returns all the rows from the right table

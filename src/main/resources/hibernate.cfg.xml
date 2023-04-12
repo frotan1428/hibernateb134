@@ -39,6 +39,10 @@
 
         <property name="format_sql">true</property>
 
+<!--        this will map entity classess without AddAnnotatedClass();-->
+        <mapping class="hb05.uni_manytoone.Student05"/>
+        <mapping class="hb05.uni_manytoone.University"/>
+
 
     </session-factory>
 
